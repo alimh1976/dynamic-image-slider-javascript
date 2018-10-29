@@ -1,2 +1,2 @@
-<img width="200px" />
-<p>this is a dynamic image slider</p>
+<img src="images/marquee.png" width="400px" height="auto" />
+<p style="text-align:center">this is a dynamic image slider if you add other panels it will be dynamicly updated and indicators will be added automatically</p>
