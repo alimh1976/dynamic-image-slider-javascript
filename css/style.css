@@ -9,7 +9,8 @@ body{
 	font-family: 'Mali', cursive;;
 	font-size: 16px;
 	font-weight: 400;
-	background: rgba(220,220,220,1.00);
+	background: rgba(220,220,220,1.00) url("./../images/bugatti_veyron_wallPaper-20180208.jpg") no-repeat right bottom/cover;
+
 }
 
 
@@ -20,15 +21,19 @@ body{
 .marquee-container {
 	
  	width: 700px;
-  	height: 350px;
+  	height:400px;
 	position: absolute;
 	box-sizing: border-box;
 	padding: 10px;
 	overflow: hidden;
 	margin: auto;
 	top: 50%;
-	left: 50%;
+	left: 75%;
 	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	border: 1px solid #333;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px 5px #eee;
 	
 }
 .marquee-container .marquee-photos{
@@ -42,7 +47,7 @@ body{
 }
 .marquee-container .marquee-photos img{
 	width: 700px;
-	height: 350px;
+	height: 400px;
 
 }
 .marquee-container .marquee-caption {
@@ -62,7 +67,7 @@ body{
 }
 .marquee-container .marquee-caption a:hover{
   	
-	color: rgba(16,51,77,1.00);
+	color: rgb(12, 114, 192);
 	
 }
 .marquee-container .marquee-nav {
@@ -78,6 +83,8 @@ body{
 	height: 20px;
 	border: 1px solid #333;
 	border-radius: 50%;
+	/* padding: 2px; */
+	cursor: pointer;
 	
 	
 }
@@ -88,7 +95,7 @@ body{
 }
 
 .selected{
-	background: rgba(187,124,5,1.00);
+	background: rgb(221, 204, 55);
 }
 
 
