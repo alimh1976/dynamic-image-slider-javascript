@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Mali:400,700');
+
+html,body{
+	height: 100%;
+}
+
+body{
+	margin: 0px;
+	font-family: 'Mali', cursive;;
+	font-size: 16px;
+	font-weight: 400;
+	background: rgba(220,220,220,1.00);
+}
+
+
+.marquee-panels {
+	display: none;
+}
+
+.marquee-container {
+	
+ 	width: 700px;
+  	height: 350px;
+	position: absolute;
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.marquee-container .marquee-photos{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transition: all 500ms;
+	display: none;
+	
+
+}
+.marquee-container .marquee-photos img{
+	width: 700px;
+	height: 350px;
+
+}
+.marquee-container .marquee-caption {
+  	width: 700px;
+  	background: rgba(0, 0, 0, 0.66);
+	position: absolute;
+	top: 340px;
+	left: 0px;
+/*	transition: all 200ms;*/
+	color: #fff;
+	box-sizing: border-box;
+	padding: 15px 10px 10px 5px;
+}
+.marquee-container .marquee-caption a{
+  	color: aqua;
+	text-decoration: none;
+}
+.marquee-container .marquee-caption a:hover{
+  	
+	color: rgba(16,51,77,1.00);
+	
+}
+.marquee-container .marquee-nav {
+  	
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+.marquee-container .marquee-nav span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #333;
+	border-radius: 50%;
+	
+	
+}
+.marquee-container .marquee-nav > span + span{
+	margin-left: 5px;
+	
+	
+}
+
+.selected{
+	background: rgba(187,124,5,1.00);
+}
+
+
+.display{
+	display: none;
+}
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.imgpreload.min.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+		
+		$(".marquee-panel-caption a").attr({"target":"_blank"});//to open more information link in aseprate page
+		
+		
+		
+		
+		$(".marquee-panel-photo").each(function(index){
+			
+			$photoWidth=$(this).width();
+			$(".marquee-photos").width($photoWidth * (index +1));  
+			$(".marquee-photos").append('<img class="marquee-panel-photo" src="'+$(this).attr("src")+'"/>');
+			
+
+		});
+		
+		$(".marquee-panel").each(function(index){
+			
+			$(".marquee-nav").append("<span></span>");
+			
+		});
+			
+		
+	$(".marquee-nav span").click(function(){
+			
+				var index=$(this).index();
+				
+				$(this).siblings().removeClass().end().addClass("selected");
+			
+				var marqueePhoyoPosition =$(".marquee-panel-photo").width() * index;
+				$(".marquee-photos").css({"left":(-marqueePhoyoPosition + "px")});
+				$(".marquee-caption").animate({"top":"340px"},600,"linear",function(){
+					
+				var $marqueeCaptioncontent=$(".marquee-panel-caption:eq("+index+")").html();
+				$(".marquee-caption-content").html($marqueeCaptioncontent);
+
+
+				marqueeCaptionSlideUp();					
+					
+				});
+			
+	});
+		
+		
+		$(".marquee-panel img").imgpreload(function(){
+			initialData();
+		})
+		
+		
+	});
+		
+		
+		
+	function initialData(){
+		
+		$(".marquee-nav span").first().addClass("selected");
+		
+		$(".marquee-caption-content").html(
+			
+			$(".marquee-panel-caption:eq(0)").html()
+		
+		);
+		
+		$(".marquee-photos").fadeIn();
+		
+		marqueeCaptionSlideUp();
+		
+		
+		
+		
+};
+		
+		
+	function marqueeCaptionSlideUp(){
+
+		var marqueeContainerHeight=$(".marquee-container").outerHeight();
+			var marqueeCaptionHeight=$(".marquee-caption").outerHeight();
+		
+		$(".marquee-caption").animate({"top":marqueeContainerHeight - marqueeCaptionHeight},600,"linear");
+		
+	}	;
+		
+	
+	</script>
+</head>
+<body>
+	
+	
+	
+<div class="marquee-container">
+  <div class="marquee-photos"></div>
+<div class="marquee-caption">
+	<div class="marquee-caption-content"></div>
+</div>
+	
+	<div class="marquee-nav"></div>
+</div>
+	
+	
+	
+	
+	
+	<!--panels-->
+	
+	<div class="marquee-panels">
+	
+	<!--panel-->
+		
+		<div class="marquee-panel">
+		<img src="images/928-1-Bonhams-Pawel-Litwinski.jpg" alt="" class="marquee-panel-photo" width="700" height="350">
+		<div class="marquee-panel-caption">
+			<h4>cameron</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ullam sint, recusandae dolorem maxime corporis quaerat, aliquam porro suscipit aliquid laboriosam. Atque, accusamus mollitia saepe unde vitae illo quod neque!</p>
+			
+			<a href="https://cartype.com/pages/3471/top_10_best_car_names">click for more</a>
+			
+		</div>
+		
+		
+		</div>
+	<!--panel-->
+		
+		<div class="marquee-panel">
+		<img src="images/Noa-L-NEWS-Porsche-Destroys-Lamborghinis-Track-Record.jpg" alt="" class="marquee-panel-photo"  width="700" height="350">
+		<div class="marquee-panel-caption">
+			<h4>Dodge Swinger</h4>
+			<p>Whether or not these were intentionally bought by those pursuing a less vanilla life, we can’t say, but the Swinger was one of Dodge’s best car names. Not that it was one of the division’s best cars, which explains why it’s our No. 10. Thing was, nobody at the time paid inordinate attention to the moniker given to two-door Dart models. If anything, it was the Demon that got negative attention from conservative groups.</p>
+			
+			<a href="https://cartype.com/pages/3471/top_10_best_car_names">click for more</a>
+			
+		</div>
+		
+		
+		</div>
+	<!--panel-->
+		
+		<div class="marquee-panel">
+		<img src="images/P1090725_5011_Porsche_1986_959__Prototype_WPOZZZ93ZFS010067_900.jpg" alt="" class="marquee-panel-photo"  width="700" height="350">
+		<div class="marquee-panel-caption">
+			<h4>Chevrolet Corvette</h4>
+				<p>One of the best car names has never enjoyed continual presence. Since the now-famous script appeared on the fenders of a few special Porsche 356s in 1956, the Carrera (Spanish for “race”) name has generally denoted a special,</p>
+			
+			<a href="https://cartype.com/pages/3471/top_10_best_car_names">click for more</a>
+			
+		</div>
+		
+		
+		</div>
+	<!--panel-->
+		
+		<div class="marquee-panel">
+		<img src="images/porsche-Character.jpg" alt="" class="marquee-panel-photo"  width="700" height="350">
+		<div class="marquee-panel-caption">
+			<h4>Bugatti Veyron. 2006-Present</h4>
+			<p>The Bugatti name is magical to enthusiasts, so it takes a great model name -- and one breaking from the “EB” designation -- to stand well with the marque. However, one of the best car names is not necessarily as far removed from the automaker as you might think. The car’s name comes from Pierre Veyron, Bugatti wheelman and winner of the 24 Hours of Le Mans in 1939.</p>
+			
+			<a href="https://cartype.com/pages/3471/top_10_best_car_names">click for more</a>
+			
+		</div>
+		
+		
+		</div>
+	
+	
+	
+	
+	
+	
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>
