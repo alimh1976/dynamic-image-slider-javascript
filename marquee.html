@@ -40,7 +40,8 @@
 				var marqueePhoyoPosition =$(".marquee-panel-photo").width() * index;
 				$(".marquee-photos").css({"left":(-marqueePhoyoPosition + "px")});
 				$(".marquee-caption").animate({"top":"340px"},600,"linear",function(){
-				$(".marquee-caption-content").html($(".marquee-panel-caption:eq("+index+")").html(),marqueeCaptionSlideUp());		
+				$(".marquee-caption-content").html($(".marquee-panel-caption:eq("+index+")").html());
+				marqueeCaptionSlideUp();		
 				});
 			
 	});
